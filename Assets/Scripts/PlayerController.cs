@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     private float rangeMouse = 90f;
 
 
+
     void Start()
     {
         characterController = GetComponent<CharacterController>();
@@ -28,6 +29,7 @@ public class PlayerController : MonoBehaviour
     {
         KeyboardControler();
         MouseController();
+        
     }
 
     void KeyboardControler()
@@ -65,4 +67,6 @@ public class PlayerController : MonoBehaviour
         verticalMouse = Mathf.Clamp(verticalMouse, -rangeMouse, rangeMouse);
         Camera.main.transform.localRotation = Quaternion.Euler(verticalMouse, 0f, 0f);
     }
+
+    
 }

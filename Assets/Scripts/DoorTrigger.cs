@@ -4,10 +4,21 @@ using UnityEngine;
 
 public class DoorTrigger : MonoBehaviour
 {
-    public Animator animator;
+    public GameObject doors;
+    private Animator animator;
+    private MeshRenderer[] meshRenderer;
+    public Material materialOnTrigger;
+    public  Material materialEndTrigger;
+
     bool doorOpen = false;
     bool playerInTrigger = false;
-   
+    public GameObject interactionText;
+
+    private void Start()
+    {
+        animator = doors.GetComponent<Animator>();
+        meshRenderer = doors.GetComponentsInChildren<MeshRenderer>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -15,8 +26,10 @@ public class DoorTrigger : MonoBehaviour
         if (playerInTrigger && Input.GetKeyDown(KeyCode.E))
         {
             doorOpen = !doorOpen;
-            animator.SetBool("Open", doorOpen);
+            animator.SetBool("Open", doorOpen); 
         }
+
+        
 
     }
 
@@ -25,14 +38,25 @@ public class DoorTrigger : MonoBehaviour
         if(other.tag == "Player")
         {
             playerInTrigger = true;
+            interactionText.SetActive(true);
+            foreach(var m in meshRenderer)
+            {
+                m.material = materialOnTrigger;
+            }
         }
     }
+
 
     private void OnTriggerExit(Collider other)
     {
         if (other.tag == "Player")
         {
             playerInTrigger = false;
+            interactionText.SetActive(false);
+            foreach (var m in meshRenderer)
+            {
+                m.material = materialEndTrigger;
+            }
         }
     }
 }

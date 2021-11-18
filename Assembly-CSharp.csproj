@@ -53,8 +53,15 @@
     <UnityVersion>2020.3.22f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\ChangeColour.cs" />
+    <Compile Include="Assets\Scripts\ThirdPersonCamera.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\DoorTrigger.cs" />
+    <Compile Include="Assets\Scripts\TimeControler.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\[BFW]SimpleDynamicClouds\ReadMe.txt" />
+    <None Include="Assets\[BFW]SimpleDynamicClouds\Shaders\2DClouds.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
