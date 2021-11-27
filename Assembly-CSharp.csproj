@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\ChangeColour.cs" />
     <Compile Include="Assets\Scripts\Crystal.cs" />
+    <Compile Include="Assets\Scripts\PanelController.cs" />
     <Compile Include="Assets\Scripts\ThirdPersonCamera.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\TimeControler.cs" />
@@ -64,7 +65,9 @@
     <Compile Include="Assets\Scripts\Fruit.cs" />
     <Compile Include="Assets\Scripts\Bush.cs" />
     <Compile Include="Assets\Scripts\CrystalController.cs" />
-    <Compile Include="Assets\Scripts\PanelController.cs" />
+    <Compile Include="Assets\Scripts\PlayerSettings.cs" />
+    <Compile Include="Assets\Scripts\TranslateController.cs" />
+    <Compile Include="Assets\Scripts\TranslateText.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\[BFW]SimpleDynamicClouds\ReadMe.txt" />
